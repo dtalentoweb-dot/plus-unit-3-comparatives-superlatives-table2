@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Irregular Adjectives</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      padding: 40px 20px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(10px);
+      border-radius: 24px;
+      padding: 40px;
+      max-width: 780px;
+      width: 100%;
+      box-shadow: 0 25px 50px rgba(0,0,0,0.4);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #fff;
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: rgba(255,255,255,0.5);
+      font-size: 0.85rem;
+      margin-bottom: 32px;
+      font-style: italic;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0 10px;
+    }
+
+    thead tr th {
+      padding: 16px 24px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #fff;
+    }
+
+    thead th:nth-child(1) { background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 12px 0 0 12px; }
+    thead th:nth-child(2) { background: linear-gradient(135deg, #4facfe, #00f2fe); }
+    thead th:nth-child(3) { background: linear-gradient(135deg, #f093fb, #f5576c); border-radius: 0 12px 12px 0; }
+
+    tbody tr {
+      transition: transform 0.2s ease;
+    }
+
+    tbody tr:hover { transform: scale(1.02); }
+
+    tbody td {
+      padding: 18px 24px;
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.9);
+      font-weight: 500;
+    }
+
+    tbody td:nth-child(1) {
+      background: rgba(102,126,234,0.12);
+      border-left: 3px solid #667eea;
+      border-radius: 12px 0 0 12px;
+      font-weight: 700;
+      color: #c3ceff;
+    }
+
+    tbody td:nth-child(2) {
+      background: rgba(79,172,254,0.1);
+      border-left: 3px solid rgba(79,172,254,0.3);
+    }
+
+    tbody td:nth-child(3) {
+      background: rgba(240,147,251,0.1);
+      border-left: 3px solid rgba(240,147,251,0.3);
+      border-radius: 0 12px 12px 0;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 4px 14px;
+      border-radius: 20px;
+      font-size: 0.88rem;
+      font-weight: 700;
+    }
+
+    .badge-comp {
+      background: linear-gradient(135deg, rgba(79,172,254,0.3), rgba(0,242,254,0.15));
+      border: 1px solid rgba(79,172,254,0.5);
+      color: #7dd8ff;
+    }
+
+    .badge-sup {
+      background: linear-gradient(135deg, rgba(240,147,251,0.3), rgba(245,87,108,0.15));
+      border: 1px solid rgba(240,147,251,0.5);
+      color: #f5b8ff;
+    }
+
+    .emoji { margin-right: 8px; font-size: 1rem; }
+
+    /* Row accent colors */
+    tr.row-good td:nth-child(1) { border-left-color: #43e97b; color: #a8ffc8; background: rgba(67,233,123,0.1); }
+    tr.row-bad  td:nth-child(1) { border-left-color: #f5576c; color: #ffb0ba; background: rgba(245,87,108,0.1); }
+    tr.row-far  td:nth-child(1) { border-left-color: #4facfe; color: #b3dcff; background: rgba(79,172,254,0.1); }
+    tr.row-little td:nth-child(1) { border-left-color: #f093fb; color: #f5c6ff; background: rgba(240,147,251,0.1); }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>⚠️ Irregular Adjectives</h1>
+    <p class="subtitle">Adjetivos irregulares · Comparativo &amp; Superlativo</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>📝 Adjective</th>
+          <th>📈 Comparative</th>
+          <th>🏆 Superlative</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="row-good">
+          <td><span class="emoji">✅</span>Good</td>
+          <td><span class="badge badge-comp">Better</span></td>
+          <td><span class="badge badge-sup">The best</span></td>
+        </tr>
+        <tr class="row-bad">
+          <td><span class="emoji">❌</span>Bad</td>
+          <td><span class="badge badge-comp">Worse</span></td>
+          <td><span class="badge badge-sup">The worst</span></td>
+        </tr>
+        <tr class="row-far">
+          <td><span class="emoji">📍</span>Far</td>
+          <td><span class="badge badge-comp">Further</span></td>
+          <td><span class="badge badge-sup">The furthest</span></td>
+        </tr>
+        <tr class="row-little">
+          <td><span class="emoji">🔽</span>Little</td>
+          <td><span class="badge badge-comp">Less</span></td>
+          <td><span class="badge badge-sup">The least</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
